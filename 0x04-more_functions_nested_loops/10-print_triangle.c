@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * print_triangle - check the code for Holberton School students.
- *@n: value that will take
- * Return: Always 0.
+ * print_triangle - function
+ *@n: variable
+ * Return: 0.
  */
 void print_triangle(int n)
 {
@@ -34,3 +34,4 @@ void print_triangle(int n)
 	{
 		_putchar('\n');
 	}
+}
