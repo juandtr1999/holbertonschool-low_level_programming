@@ -1,14 +1,19 @@
 #include "holberton.h"
 /**
- * _print_rev_recursion - prints buffer in hexa
- * @s: the address of memory to print
- * Return: s.
+ * _memcpy - Copies memory area
+ * @dest: Destination array
+ * @src: Source of data to be copied
+ * @n: Number of bytes to be copied
+ * Return: pointer to destination
  */
-void _print_rev_recursion(char *s)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
+	unsigned int i;
 
-	if (*s)
+	for (i = 0; i < n ; i++)
 	{
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
+		*(dest + i) = *(src + i);
 	}
+
+	return (dest);
+}
