@@ -1,40 +1,42 @@
-#include <stdlib.h>
 #include "holberton.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
- * str_concat - a function that concatenates two strings
- * @s1: character string
- * @s2: character string
- * Return: pointer that points to a newly allocated space in memory
- *The function should return NULL on failure
+ * *str_concat - check the code for Holberton School students.
+ * @s1: this is the first accountant.
+ * @s2: this is the first accountant.
+ * Return: Always 0.
  */
-
 char *str_concat(char *s1, char *s2)
 {
-  char *a;
-  int i;
-  int j;
-  int c;
-  int d;
+  int i, j, a, b;
+  char *arr;
 
   if (s1 == NULL)
-    {
-      s1 = "";
-    }
+    s1 = "";
   if (s2 == NULL)
-    {
-      s2 = "";
-    }
-  for (i = 0; s1[i] != '\0'; i++)
+    s2 = "";
+  for (a = 0; s1[a] != '\0'; a++)
     ;
-  for (j = 0; s2[j] != '\0'; j++)
+  for (b = 0; s2[b] != '\0'; b++)
     ;
-  a = malloc((i * sizeof(*s1)) + (j * sizeof(*s2)) + 1);
-  for (c = 0, d = 0; c < (i + j + 1); c++)
+
+  arr = malloc(sizeof(char) * a + sizeof(char) * b + 1);
+
+  if (arr == NULL)
     {
-      if (c < i)
-	a[c] = s1[c];
-      else
-	a[c] = s2[d++];
+      return (NULL);
     }
-  return (a);
+
+  for (i = 0; *(s1 + i) != '\0'; i++)
+    {
+      arr[i] = *(s1 + i);
+    }
+
+  for (j = 0; *(s2 + j) != '\0'; i++, j++)
+    {
+      arr[i] = *(s2 + j);
+    }
+  arr[i] = '\0';
+  return (arr);
 }
