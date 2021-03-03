@@ -1,40 +1,46 @@
 #include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
 /**
- * argstostr - concatenate all arguments
- * @ac: argument count
- * @av: double pointer to array of strings passed to main
- * Return: NULL if fail, else return pointer to new string
+ * argstostr - check the code for Holberton School students.
+ *@ac: the variable
+ *@av: another variable
+ *Return: dest
  */
-
 char *argstostr(int ac, char **av)
 {
-  int i = 0;
-  int j;
-  int x;
-  int y;
-  char *p;
+  int count1 = 0, count2, count3, count4, Long = 0;
+  char *s;
 
-  if (ac == 0 || av == NULL)
+  if (ac == 0 || av == '\0')
+    return (NULL);
+
+  for (count1 = 0; count1 < ac; count1++)
     {
-      return (NULL);
-    }
-  for (i = 0, x = 0, y = 0; x < ac; i++)
-    {
-      if (av[x][y] == '\0')
+      count2 = 0;
+      while (av[count1][count2] != '\0')
 	{
-	  x++;
+	  count2++;
 	}
+      Long  +=  count2 + 1;
     }
-  p = malloc(i * sizeof(char));
-  if (p == NULL)
+  s = malloc(sizeof(char) * (Long + 1));
+
+  if (s == NULL)
     {
       return (NULL);
     }
-  for (i = 0, j = 0; i < ac; i++, j++)
+  Long = 0;
+  for (count3 = 0; count3 < ac; count3++)
     {
-      p[j] = av[i][j];
+      for (count4 = 0; av[count3][count4] != '\0'; count4++)
+	{
+	  *(s + Long) = av[count3][count4];
+	  Long++;
+	}
+      *(s + Long) = '\n';
+      Long++;
     }
 
-  return (p);
+  return (s);
 }
