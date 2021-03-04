@@ -1,22 +1,19 @@
-#include <holberton.h>
-#include <stdio.h>
+#incluyen  "holberton.h"
+  #incluyen  <stdlib.h>
 /**
- * malloc_checked - asigna memori.
+ * malloc_checked - Asigna memoria.
  * @b: tamaño a asignar
- * Return: Pointer to allocated memory.
+ * Retorno: puntero a la memoria asignada.
  */
-void *malloc_checked( int bsin  sing)
+void *malloc_checked( int bsin firmar)
 {
-  vasio *new_memory;
+  vacío *new_memory;
+
   new_memory = malloc(b);
   if (new_memory == NULL)
+    {
+      salida(98);
+    }
 
-}
-{
-  salida(98);
-  
-}
-{
-  devolucion(new_memory);
-  
+  devolución (new_memory);
 }
