@@ -1,23 +1,20 @@
+#include "holberton.h"
 #include <stdio.h>
-#include <stdio.h>
-#incluyen <limits.h>
-#incluyen  "holberton.h"
+
 /**
- * * malloc_checked - programa que imprime su nombre.
- * @b: matriz de punteros de caracteres
- * Devolución: 0.
+ *malloc_checked : allocate memory by malloc
+ *@b: int unsigned
+ *Return: A pointer to allocated memory
  */
-void *malloc_checked( int bsin firmar)
+
+void *malloc_checked( int bsin unsigned)
 {
   vacío *p;
 
   p = malloc(b);
-
   if (p == NULL)
     {
-      gratis(p);
-
-      salida(98);
+      exit(98);
     }
-  retorno (p);
+  return (p);
 }
