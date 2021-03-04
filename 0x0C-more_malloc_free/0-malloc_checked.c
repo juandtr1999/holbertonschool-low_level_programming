@@ -1,19 +1,23 @@
+#include <stdio.h>
+#include <stdio.h>
+#incluyen <limits.h>
 #incluyen  "holberton.h"
-  #incluyen  <stdlib.h>
 /**
- * malloc_checked - Asigna memoria.
- * @b: tamaño a asignar
- * Retorno: puntero a la memoria asignada.
+ * * malloc_checked - programa que imprime su nombre.
+ * @b: matriz de punteros de caracteres
+ * Devolución: 0.
  */
 void *malloc_checked( int bsin firmar)
 {
-  vacío *new_memory;
+  vacío *p;
 
-  new_memory = malloc(b);
-  if (new_memory == NULL)
+  p = malloc(b);
+
+  if (p == NULL)
     {
+      gratis(p);
+
       salida(98);
     }
-
-  devolución (new_memory);
+  retorno (p);
 }
