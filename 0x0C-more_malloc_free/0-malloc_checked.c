@@ -1,15 +1,15 @@
 #include "holberton.h"
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
- *malloc_checked : allocate memory by malloc
- *@b: int unsigned
- *Return: A pointer to allocated memory
+ *malloc_checked - allocate memory using malloc
+ *@b: unsigned int
+ *Return: a pointer to allocated memory
  */
 
-void *malloc_checked( int bsin unsigned)
+void *malloc_checked(unsigned int b)
 {
-  vacío *p;
+  void *p;
 
   p = malloc(b);
   if (p == NULL)
