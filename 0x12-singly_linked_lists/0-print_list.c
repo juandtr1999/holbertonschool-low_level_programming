@@ -1,22 +1,22 @@
 #include "lists.h"
-#include <stdio.h>
 /**
- * print_list - Prints list.
- * @h: Start of linked list
- * Return: Number os nodes.
+ * print_list - check the code for Holberton School students.
+ *@h: the variable
+ *Return: size
  */
-int print_list(const list_t *h)
+size_t print_list(const list_t *h)
 {
-	int i;
+	size_t size = 0;
 
-	for (i = 0; h; i++)
+	while (h)
 	{
-		if (h->str == NULL)
+		if (!(h->str))
 			printf("[0] (nil)\n");
 		else
-			printf("[%i] %s\n", h->len, h->str);
-		h = h->next;
-	}
+			printf("[%d] %s\n", h->len, h->str);
+		h = h->next, size++;
 
-	return (i);
+	}
+	return (size);
+
 }
