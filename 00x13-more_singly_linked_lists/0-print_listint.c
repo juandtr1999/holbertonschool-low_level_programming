@@ -1,18 +1,18 @@
-# incluir  " listas.h "
-/ * *
-* print_listint - Imprime una lista
+#include "lists.h"
+/**
+* print_listint - Prints a list
 * @h: variable
-* Devolución: n
-* /
-size_t  print_listint ( const  listint_t * h)
+* Return: n
+*/
+size_t print_listint(const listint_t *h)
 {
-	size_t n = 0 ;
+	size_t n = 0;
 
-	mientras (h)
+	while (h)
 	{
-		printf ( " % d \ n " , h-> n );
-		h = h-> siguiente ;
-		n ++;
+		printf("%d\n", h->n);
+		h = h->next;
+		n++;
 	}
-retorno (n);
+return (n);
 }
