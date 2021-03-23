@@ -1,17 +1,17 @@
-# incluir  " listas.h "
-/ * *
-* listint_len - función que devuelve el número de elementos
+#include "lists.h"
+/**
+* listint_len - function that returns the number of elements
 * @h: variable
-* Devolución: n
-* /
-size_t  listint_len ( const  listint_t * h)
+* Return: n
+*/
+size_t listint_len(const listint_t *h)
 {
-	size_t n = 0 ;
+	size_t n = 0;
 
-	mientras (h)
+	while (h)
 	{
-		h = h-> siguiente ;
-		n ++;
+		h = h->next;
+		n++;
 	}
-retorno (n);
+return (n);
 }
