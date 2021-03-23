@@ -1,19 +1,17 @@
 # incluir  " listas.h "
-# incluye  < stdio.h >
 / * *
- * print_listint: imprime todos los elementos de la lista.
- * @h: Lista vinculada.
- * Retorno: Número de nodos en la lista.
- * /
-int  print_listint ( const  listint_t * h)
+* print_listint - Imprime una lista
+* @h: variable
+* Devolución: n
+* /
+size_t  print_listint ( const  listint_t * h)
 {
-	int nodos;
+	size_t n = 0 ;
 
-	para (nodos = 0 ; h; nodos ++)
+	mientras (h)
 	{
-		printf ( " % i \ n " , h-> n );
+		printf ( " % d \ n " , h-> n );
 		h = h-> siguiente ;
+		n ++;
 	}
-
-	retorno (nodos);
-}
+retorno (n);
