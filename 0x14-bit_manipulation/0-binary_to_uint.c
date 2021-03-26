@@ -1,24 +1,36 @@
-#include "holberton.h"
-/**
- * binary_to_uint - Converts binary to unsigned int
- * @b: Binary number
- * Return: Converted number.
- */
-unsigned int binary_to_uint(const char *b)
+# incluye  " holberton.h "
+/ * *
+ * _strlen: calcula la longitud de la cadena
+ * @s: entrada
+ * Retorno: longitud de la cuerda
+ * /
+unsigned  int  _strlen ( const  char * s)
+{
+	 longitud int sin firmar ;
+
+	para (longitud = 0 ; * (s + longitud); longitud ++)
+		;
+	retorno (longitud);
+}
+/ * *
+ * binary_to_uint: convierte una cadena de unos y ceros en un número decimal
+ * @b: cadena para convertir
+ * Devolución: número decimal sin signo
+ * /
+unsigned  int  binary_to_uint ( const  char * b)
 {
 	int i;
-	unsigned int res;
+	 resultado int sin firmar , expo;
 
-	if (!b)
-		return (0);
-	for (i = 0; b[i]; i++)
-		if (b[i] != '1' && b[i] != '0')
-			return (0);
-	for (i = 0; b[i]; i++)
+	si (! b)
+		return ( 0 );
+	i = _strlen (b) - 1 ;
+	para (resultado = 0 , expo = 1 ; i> = 0 ; i--, expo * = 2 )
 	{
-		res = res << 1;
-		if (b[i] == '1')
-			res = res + 1;
+		si (b [i]! = ' 0 ' && b [i]! = ' 1 ' )
+			return ( 0 );
+		si (b [i] == ' 1 ' )
+			resultado + = expo;
 	}
-	return (res);
+	retorno (resultado);
 }
