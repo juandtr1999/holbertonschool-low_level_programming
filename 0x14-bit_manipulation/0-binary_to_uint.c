@@ -1,36 +1,36 @@
-# incluye  " holberton.h "
-/ * *
- * _strlen: calcula la longitud de la cadena
- * @s: entrada
- * Retorno: longitud de la cuerda
- * /
-unsigned  int  _strlen ( const  char * s)
+#include "holberton.h"
+/**
+ * _strlen - calculates the length of the string
+ * @s: input
+ * Return: length of string
+ */
+unsigned int _strlen(const char *s)
 {
-	 longitud int sin firmar ;
+	unsigned int length;
 
-	para (longitud = 0 ; * (s + longitud); longitud ++)
+	for (length = 0; *(s + length); length++)
 		;
-	retorno (longitud);
+	return (length);
 }
-/ * *
- * binary_to_uint: convierte una cadena de unos y ceros en un número decimal
- * @b: cadena para convertir
- * Devolución: número decimal sin signo
- * /
-unsigned  int  binary_to_uint ( const  char * b)
+/**
+ * binary_to_uint - converts a string of 1's and 0's to a decimal number
+ * @b: string to convert
+ * Return: unsigned decimal number
+ */
+unsigned int binary_to_uint(const char *b)
 {
 	int i;
-	 resultado int sin firmar , expo;
+	unsigned int result, expo;
 
-	si (! b)
-		return ( 0 );
-	i = _strlen (b) - 1 ;
-	para (resultado = 0 , expo = 1 ; i> = 0 ; i--, expo * = 2 )
+	if (!b)
+		return (0);
+	i = _strlen(b) - 1;
+	for (result = 0, expo = 1; i >= 0; i--, expo *= 2)
 	{
-		si (b [i]! = ' 0 ' && b [i]! = ' 1 ' )
-			return ( 0 );
-		si (b [i] == ' 1 ' )
-			resultado + = expo;
+		if (b[i] != '0' && b[i] != '1')
+			return (0);
+		if (b[i] == '1')
+			result += expo;
 	}
-	retorno (resultado);
+	return (result);
 }
